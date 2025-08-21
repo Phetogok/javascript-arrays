@@ -13,38 +13,49 @@
     />
 
     <style>
-        th{
-            background-color: black;
-            color: white;
-        }
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+      th {
+        background-color: black;
+        color: white;
+      }
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-        .container {
-            width: 700px;
-            margin: 20px auto;
-        }
+      .container {
+        width: 700px;
+        margin: 20px auto;
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="row mb-3">
+        <div class="col">
+          <div class="card card-body">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search..."
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>FirstName</th>
             <th>Age</th>
             <th>Birthday</th>
           </tr>
         </thead>
 
-        <tbody  id="myTable">
-           
-        </tbody>
+        <tbody id="myTable"></tbody>
       </table>
     </div>
 

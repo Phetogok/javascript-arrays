@@ -7,8 +7,21 @@ var myArray = [
 	{'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
 ]
 
+// var myArray = [];
+
+// fetch('https://dummyjson.com/users')
+//     .then(response => response.json())
+//     .then(data => {
+//         myArray = data.users;
+//         buildTable(myArray)
+//     })
+//     .catch(err => console.log("Error", err))
+
+
+
 function buildTable(data) {
   var table = document.getElementById("myTable");
+  table.innerHTML = ""; 
 
   for (var i = 0; i < data.length; i++) {
     var row = `
@@ -18,9 +31,10 @@ function buildTable(data) {
                 <td>${data[i].birthdate}</td>
             </tr>
         `;
+    table.innerHTML += row;
   }
-
-  table.innerHTML += row
 }
 
-buildTable(myArray)
+buildTable(myArray);
+
+
